@@ -1,0 +1,25 @@
+server:
+  port: 8081
+
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111/
+
+  datasource:
+    password: idfc
+    url: jdbc:mysql://localhost:3306/ecommerce_backend
+    username: root
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
